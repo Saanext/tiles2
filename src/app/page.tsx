@@ -11,16 +11,19 @@ const ParallaxSection = ({
   children,
   className,
   id,
+  ...props
 }: {
   imageUrl: string;
   children: React.ReactNode;
   className?: string;
   id?: string;
+  [key: string]: any;
 }) => (
   <section
     id={id}
     className={`relative bg-cover bg-fixed bg-center ${className}`}
     style={{ backgroundImage: `url(${imageUrl})` }}
+    {...props}
   >
     <div className="absolute inset-0 bg-black/40" />
     <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -143,7 +146,7 @@ export default function Home() {
 
         <ParallaxSection
           imageUrl="https://placehold.co/1920x800.png"
-          data-ai-hint="abstract glass texture"
+          data-ai-hint="italian tiles"
           id="products"
           className="py-20 lg:py-28"
         >
