@@ -25,7 +25,7 @@ export const productCategories = [
 ];
 
 export const products: Product[] = [
-  { id: 1, name: "Azure Enamel Tile", category: "Enamel Mosaic Tiles", imageUrl: "https://placehold.co/600x400.png", aiHint: "blue enamel tile" },
+  { id: 1, name: "Azure Enamel Tile", category: "Enamel Mosaic Tiles", imageUrl: "https://images.unsplash.com/photo-1660029761445-49d108930691?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb3NhaWMlMjB0aWxlc3xlbnwwfHx8fDE3NTA4NzEwODh8MA&ixlib=rb-4.1.0&q=80&w=1080", aiHint: "blue enamel tile" },
   { id: 2, name: "Veridian Grove Mural", category: "Glass Mosaic Mural", imageUrl: "https://placehold.co/600x400.png", aiHint: "green tree mural" },
   { id: 3, name: "Crystal Clear Mosaic", category: "Glass Mosaic Tiles", imageUrl: "https://placehold.co/600x400.png", aiHint: "clear glass mosaic" },
   { id: 4, name: "Aqua Marine Glass", category: "Glass Tiles", imageUrl: "https://placehold.co/600x400.png", aiHint: "aqua glass tile" },

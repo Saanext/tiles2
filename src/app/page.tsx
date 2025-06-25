@@ -161,7 +161,7 @@ export default function Home() {
         </ParallaxSection>
 
         <ParallaxSection
-          imageUrl="https://placehold.co/1920x900.png"
+          imageUrl="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg"
           data-ai-hint="water texture"
           id="contact"
           className="py-20 lg:py-28"
