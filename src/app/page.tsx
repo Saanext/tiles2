@@ -11,21 +11,24 @@ const ParallaxSection = ({
   children,
   className,
   id,
+  'data-ai-hint': aiHint,
   ...props
 }: {
   imageUrl: string;
   children: React.ReactNode;
   className?: string;
   id?: string;
+  'data-ai-hint'?: string;
   [key: string]: any;
 }) => (
   <section
     id={id}
     className={`relative bg-cover bg-fixed bg-center ${className}`}
     style={{ backgroundImage: `url(${imageUrl})` }}
+    data-ai-hint={aiHint}
     {...props}
   >
-    <div className="absolute inset-0 bg-black/40" />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
     <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
       {children}
     </div>
@@ -96,7 +99,7 @@ export default function Home() {
       <Header />
       <main>
         <ParallaxSection
-          imageUrl="https://placehold.co/1920x1080.png"
+          imageUrl="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg"
           data-ai-hint="luxury bathroom"
           className="min-h-screen flex items-center justify-center text-center"
         >
@@ -145,8 +148,8 @@ export default function Home() {
         </ContentSection>
 
         <ParallaxSection
-          imageUrl="https://placehold.co/1920x800.png"
-          data-ai-hint="italian tiles"
+          imageUrl="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+          data-ai-hint="italian tiles floor"
           id="products"
           className="py-20 lg:py-28"
         >
