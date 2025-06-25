@@ -3,8 +3,8 @@ import { Gem, LayoutGrid, Droplets, Bath } from 'lucide-react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ContactForm } from '@/components/contact-form';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const ParallaxSection = ({
   imageUrl,
@@ -69,27 +69,6 @@ const categories = [
     name: "Bathroom Furnishings",
     icon: <Bath className="w-12 h-12 text-primary" />,
     description: "Complete your sanctuary with our exclusive furnishings.",
-  },
-];
-
-const featuredProducts = [
-  {
-    name: "Azure Dream Mosaic",
-    category: "Crystal Mosaics",
-    imageUrl: "https://placehold.co/600x400.png",
-    aiHint: "blue glass mosaic"
-  },
-  {
-    name: "Venetian Wave Basin",
-    category: "Wash Basins",
-    imageUrl: "https://placehold.co/600x400.png",
-    aiHint: "glass sink"
-  },
-  {
-    name: "Terra Firma Tile",
-    category: "Glass Tiles",
-    imageUrl: "https://placehold.co/600x400.png",
-    aiHint: "earth tone tiles"
   },
 ];
 
@@ -175,36 +154,11 @@ export default function Home() {
                 </div>
               ))}
             </div>
+             <Button asChild size="lg" className="mt-12">
+              <Link href="/products">Explore All Products</Link>
+            </Button>
           </div>
         </ParallaxSection>
-
-        <ContentSection>
-          <h2 className="text-4xl lg:text-5xl font-bold font-headline text-center mb-12">
-            Featured Products
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProducts.map((product) => (
-              <Card key={product.name} className="overflow-hidden border-2 hover:border-primary transition-all duration-300 hover:shadow-2xl group">
-                <CardContent className="p-0">
-                  <div className="overflow-hidden">
-                  <Image
-                    src={product.imageUrl}
-                    alt={product.name}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
-                    data-ai-hint={product.aiHint}
-                  />
-                  </div>
-                  <div className="p-6">
-                    <p className="text-sm text-primary font-semibold">{product.category}</p>
-                    <h3 className="text-2xl font-bold mt-1">{product.name}</h3>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </ContentSection>
 
         <ParallaxSection
           imageUrl="https://placehold.co/1920x900.png"

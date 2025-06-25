@@ -25,9 +25,9 @@ export function Header() {
   }, []);
 
   const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Products", href: "#products" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/#about" },
+    { name: "Products", href: "/products" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -49,7 +49,7 @@ export function Header() {
           </Link>
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className={cn(
@@ -58,11 +58,11 @@ export function Header() {
                 )}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
           <Button asChild className="hidden md:flex">
-            <a href="#contact">Get a Quote</a>
+            <Link href="/#contact">Get a Quote</Link>
           </Button>
           {/* A mobile menu trigger could be added here for smaller screens */}
         </div>
