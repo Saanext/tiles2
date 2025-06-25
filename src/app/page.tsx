@@ -120,7 +120,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="rounded-lg overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
               <Image
-                src="https://placehold.co/600x700.png"
+                src="https://images.unsplash.com/photo-1595916430766-95b932a5b032?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3NhaWMlMjB0aWxlc3xlbnwwfHx8fDE3NTA4NzEwODh8MA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Italian glass design detail"
                 width={600}
                 height={700}
