@@ -5,9 +5,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ProductGrid } from '@/components/product-grid';
 import { products, productCategories } from '@/lib/products';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
+import { Button } from '@/components/ui/button';
 
 const allCategory = "All Products";
 
@@ -34,29 +32,28 @@ export default function ProductsPage() {
           
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             <aside className="lg:col-span-1">
-              <Card className="sticky top-28 border-2 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Categories</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <RadioGroup
-                    value={filter}
-                    onValueChange={setFilter}
-                    className="space-y-4"
+               <div className="sticky top-28">
+                <h2 className="text-2xl font-bold mb-6">Categories</h2>
+                <div className="flex flex-col items-start gap-1">
+                  <Button
+                    onClick={() => setFilter(allCategory)}
+                    variant={filter === allCategory ? 'secondary' : 'ghost'}
+                    className="w-full justify-start"
                   >
-                    <div className="flex items-center space-x-3">
-                      <RadioGroupItem value={allCategory} id="r-all" />
-                      <Label htmlFor="r-all" className="font-normal cursor-pointer text-base">{allCategory}</Label>
-                    </div>
-                    {productCategories.map(category => (
-                      <div key={category} className="flex items-center space-x-3">
-                        <RadioGroupItem value={category} id={`r-${category.replace(/[\s/]+/g, '-')}`} />
-                        <Label htmlFor={`r-${category.replace(/[\s/]+/g, '-')}`} className="font-normal cursor-pointer text-base">{category}</Label>
-                      </div>
-                    ))}
-                  </RadioGroup>
-                </CardContent>
-              </Card>
+                    {allCategory}
+                  </Button>
+                  {productCategories.map((category) => (
+                    <Button
+                      key={category}
+                      onClick={() => setFilter(category)}
+                      variant={filter === category ? 'secondary' : 'ghost'}
+                      className="w-full justify-start text-left h-auto py-2 leading-snug"
+                    >
+                      {category}
+                    </Button>
+                  ))}
+                </div>
+              </div>
             </aside>
             
             <div className="lg:col-span-3">
