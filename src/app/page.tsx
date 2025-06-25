@@ -28,7 +28,7 @@ const ParallaxSection = ({
     data-ai-hint={aiHint}
     {...props}
   >
-    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+    <div className="absolute inset-0 bg-black/50" />
     <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
       {children}
     </div>
