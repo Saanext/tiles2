@@ -47,7 +47,7 @@ export default function ProductsPage() {
                       key={category}
                       onClick={() => setFilter(category)}
                       variant={filter === category ? 'secondary' : 'ghost'}
-                      className="w-full justify-start text-left h-auto py-2 leading-snug"
+                      className="w-full justify-start text-left h-auto py-2 leading-snug whitespace-normal"
                     >
                       {category}
                     </Button>
