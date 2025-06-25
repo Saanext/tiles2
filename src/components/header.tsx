@@ -44,7 +44,7 @@ export function Header() {
               <Logo />
             </div>
             <span className={cn("text-2xl font-bold font-headline tracking-tight", scrolled ? "text-foreground" : "text-white")}>
-              Vetro Italia
+              STYLEON ART FACTORY
             </span>
           </Link>
           <nav className="hidden md:flex items-center gap-8">

@@ -105,7 +105,7 @@ export default function Home() {
         >
           <div className="text-white p-4">
             <h1 className="text-5xl md:text-7xl font-bold font-headline mb-4 tracking-tight animate-fade-in-down">
-              Vetro Italia
+              STYLEON ART FACTORY
             </h1>
             <p className="text-xl md:text-2xl font-body max-w-3xl mx-auto animate-fade-in-up">
               Crafting Elegance in Glass. Truly Italian Designs & Concepts.
@@ -133,7 +133,7 @@ export default function Home() {
                 The Art of Italian Glass
               </h2>
               <p className="text-lg mb-4 text-muted-foreground">
-                Vetro Italia brings you an exquisite collection of crystal glass
+                STYLEON ART FACTORY brings you an exquisite collection of crystal glass
                 products, born from a passion for Italian artistry and modern
                 innovation. Our creations are not just products; they are a
                 statement of luxury and sophistication for your living spaces.

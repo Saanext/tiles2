@@ -15,10 +15,10 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
           <div className="flex items-center gap-3 text-background">
             <Logo />
-            <span className="text-xl font-bold">Vetro Italia</span>
+            <span className="text-xl font-bold">STYLEON ART FACTORY</span>
           </div>
           <div>
-            <p>&copy; {new Date().getFullYear()} Vetro Italia. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} STYLEON ART FACTORY. All rights reserved.</p>
             <p className="text-sm">Italian Design & Concepts for Modern Spaces.</p>
           </div>
           <div className="flex gap-4">

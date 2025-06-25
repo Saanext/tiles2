@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Vetro Italia - Italian Glass Design',
+  title: 'STYLEON ART FACTORY - Italian Glass Design',
   description: 'Manufacturing & distributing wide range of Crystal glass mosaics & Glass tiles, wash basins, and bathroom furnishing products with truly Italian designs & concepts.',
 };
 
