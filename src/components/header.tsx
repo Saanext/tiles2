@@ -34,16 +34,17 @@ export function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-background/90 backdrop-blur-sm shadow-md" : "bg-transparent"
+        "bg-background/90 backdrop-blur-sm",
+        scrolled ? "shadow-md" : ""
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 text-primary transition-colors">
-            <div className={cn("text-primary", scrolled ? "text-primary" : "text-white")}>
+            <div className={cn("text-primary")}>
               <Logo />
             </div>
-            <span className={cn("text-2xl font-bold font-headline tracking-tight", scrolled ? "text-foreground" : "text-white")}>
+            <span className={cn("text-2xl font-bold font-headline tracking-tight", "text-foreground")}>
               STYLEON ART FACTORY
             </span>
           </Link>
@@ -54,7 +55,7 @@ export function Header() {
                 href={item.href}
                 className={cn(
                   "text-base font-medium transition-colors hover:text-primary",
-                  scrolled ? "text-foreground" : "text-white"
+                  "text-foreground"
                 )}
               >
                 {item.name}
