@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Menu } from 'lucide-react';
 
 const Logo = () => (
   <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="transition-colors duration-300">
@@ -34,8 +36,7 @@ export function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        "bg-background/90 backdrop-blur-sm",
-        scrolled ? "shadow-md" : ""
+        "bg-background/90 backdrop-blur-sm shadow-md"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,6 +49,8 @@ export function Header() {
               STYLEON ART FACTORY
             </span>
           </Link>
+          
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
@@ -65,7 +68,32 @@ export function Header() {
           <Button asChild className="hidden md:flex">
             <Link href="/#contact">Get a Quote</Link>
           </Button>
-          {/* A mobile menu trigger could be added here for smaller screens */}
+
+          {/* Mobile Menu Trigger */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Open menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+                 <nav className="flex flex-col gap-6 pt-8">
+                    {navItems.map((item) => (
+                      <SheetClose asChild key={item.name}>
+                        <Link
+                          href={item.href}
+                          className="text-lg font-medium transition-colors hover:text-primary"
+                        >
+                          {item.name}
+                        </Link>
+                      </SheetClose>
+                    ))}
+                 </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
