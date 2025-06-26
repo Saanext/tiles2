@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Gem, LayoutGrid, Droplets, Bath } from 'lucide-react';
+import { Gem, LayoutGrid, Droplets, Bath, Palette, Sparkles } from 'lucide-react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ContactForm } from '@/components/contact-form';
@@ -28,7 +28,7 @@ const ParallaxSection = ({
     data-ai-hint={aiHint}
     {...props}
   >
-    <div className="absolute inset-0 bg-black/50" />
+    <div className="absolute inset-0 bg-black/70" />
     <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
       {children}
     </div>
@@ -44,7 +44,7 @@ const ContentSection = ({
   className?: string;
   id?: string;
 }) => (
-  <section id={id} className={`bg-background py-20 lg:py-28 ${className}`}>
+  <section id={id} className={`py-20 lg:py-28 ${className}`}>
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
   </section>
 );
@@ -124,6 +124,45 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </ContentSection>
+
+        <ContentSection id="commitment" className="bg-muted">
+            <div className="text-center">
+                <h2 className="text-4xl lg:text-5xl font-bold font-headline mb-4">
+                Our Commitment
+                </h2>
+                <p className="text-lg mb-12 max-w-3xl mx-auto text-muted-foreground">
+                Fusing timeless tradition with modern aesthetics, we are committed to quality, beauty, and innovation.
+                </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
+                <div className="flex gap-6 items-start">
+                    <div className="flex-shrink-0">
+                        <div className="bg-primary/10 text-primary p-4 rounded-full inline-flex">
+                        <Palette className="w-8 h-8" />
+                        </div>
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-bold mb-2">Artisanal Craftsmanship</h3>
+                        <p className="text-muted-foreground text-lg leading-relaxed">
+                        Each product is meticulously crafted by skilled artisans, preserving age-old techniques passed down through generations. This human touch ensures that every item is unique and of the highest quality.
+                        </p>
+                    </div>
+                </div>
+                <div className="flex gap-6 items-start">
+                    <div className="flex-shrink-0">
+                        <div className="bg-primary/10 text-primary p-4 rounded-full inline-flex">
+                        <Sparkles className="w-8 h-8" />
+                        </div>
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-bold mb-2">Innovative Design</h3>
+                        <p className="text-muted-foreground text-lg leading-relaxed">
+                        We continuously explore new technologies and design concepts to push the boundaries of glass artistry. Our products blend classic elegance with contemporary style, perfect for modern living spaces.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </ContentSection>
 
         <ParallaxSection
